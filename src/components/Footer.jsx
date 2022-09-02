@@ -1,10 +1,10 @@
 const currentDate = new Date();
-const currentYear = currentDate.getFullYear;
+const currentYear = currentDate.getFullYear();
 
 export function Footer() {
     return (
         <footer>
-            <p>Copyright {currentYear}</p>
+            <p>Copyright by Jilbao, {currentYear}</p>
         </footer>
     );
 }
