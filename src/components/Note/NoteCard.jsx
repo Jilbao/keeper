@@ -1,14 +1,16 @@
 import { notes } from "../../note";
+import { NoteContent } from "./NoteContent";
+import { NoteTitle } from "./NoteTitle";
 
 export function NoteCard() {
     return (
-        <div className="note">
-            <h1>
-                Title
-            </h1>
-            <p>
-                Content
-            </p>
-        </div>
+        notes.map((element)=>{
+            return (
+                <div className="note">
+                    <NoteTitle title={element.title}/>
+                    <NoteContent content={element.content}/>
+                </div>
+            )    
+        })    
     );
 }
