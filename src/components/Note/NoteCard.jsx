@@ -1,4 +1,6 @@
-export function Note() {
+import { notes } from "../../note";
+
+export function NoteCard() {
     return (
         <div className="note">
             <h1>

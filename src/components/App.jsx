@@ -1,12 +1,13 @@
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { Note } from "./Note";
+import { NoteCard } from "./Note/NoteCard";
+
 
 export function App() {
     return (
         <div>
             <Header/>
-            <Note/>
+            <NoteCard/>
             <Footer/>
         </div>
         
