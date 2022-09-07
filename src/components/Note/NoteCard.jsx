@@ -1,6 +1,7 @@
 import { NoteContent } from "./NoteContent";
 import { NoteTitle } from "./NoteTitle";
 
+
 export function NoteCard(props) {
     return (
         <div className="note">

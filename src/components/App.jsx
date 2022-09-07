@@ -4,6 +4,7 @@ import { NoteCard } from "./Note/NoteCard";
 import { CreateArea } from "./CreateArea";
 import { useState } from "react";
 
+
 export function App() {
     const [notes, setNotes] = useState([{title: "testtitle", content: "testcontent"}]);
 
