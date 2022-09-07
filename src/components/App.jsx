@@ -13,15 +13,27 @@ export function App() {
         })
     }
 
+    function removeNote(id){
+        console.log("delete");
+        setNotes((prevValue)=>{
+            return prevValue.filter((value, index) => {
+                return index !== id
+            })
+        })
+    };
+
     return (
         <div>
             <Header/>
             <CreateArea onSubmit={addNote}/>
-            {notes.map((element) => {
+            {notes.map((element, index) => {
                 return (
-                    <NoteCard                      
+                    <NoteCard         
+                        key={index}
+                        id={index}             
                         title={element.title}
                         content={element.content}
+                        onClick={removeNote}
                     />
                     )
             })}

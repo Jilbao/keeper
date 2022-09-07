@@ -1,3 +1,6 @@
 export function NoteContent(props) {
-    return <p> {props.content} </p>
+    return <div>
+                <p> {props.content} </p>
+                <button id={props.id} onClick={()=>{props.onClick(props.id)}}>DELETE</button>
+            </div> 
 }
