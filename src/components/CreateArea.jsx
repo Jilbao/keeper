@@ -7,18 +7,16 @@ export function CreateArea(props) {
         const {name, value} = event.target;
         
         setNote((prevValue)=>{
-            if (name === "title") {
-                return {...prevValue, title: value}
-            }else if (name === "content"){
-                return {...prevValue, content: value}
-            }    
+            return ({prevValue, [name]:value})
         });
         
     }
 
     return (
       <div>
-        <form onSubmit={(event)=>{
+        <form
+            className="create-note" 
+            onSubmit={(event)=>{
             event.preventDefault()
             props.onSubmit(note)
             setNote({title: "", content: ""})
